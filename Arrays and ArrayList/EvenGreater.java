@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class EvenGreater
 {
     public ArrayList<Integer> rearrangeArray(ArrayList<Integer> arr) {
