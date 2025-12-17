@@ -10,7 +10,9 @@ public class Selection {
             {
                 if (arr[j] < arr[minIdx]) minIdx = j;
             }
+            int temp = arr[i];
             arr[i] = arr[minIdx];
+            arr[minIdx] = temp;
             
         }
     }
