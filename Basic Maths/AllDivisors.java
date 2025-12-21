@@ -9,7 +9,7 @@ public class AllDivisors {
         List<Integer> list = new ArrayList<>();
         for (int i = 1; i < num; i++)
         {
-            if (num / i == 0) list.add(i);
+            if (num % i == 0) list.add(i);
         }
         return list;
     }
