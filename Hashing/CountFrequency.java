@@ -1,5 +1,7 @@
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class CountFrequency<K> {
     public Map<K, Integer> countFrequency(K arr[])
@@ -53,5 +55,20 @@ public class CountFrequency<K> {
             }
         }
         return leastFreq;
+    }
+
+    public Set<K> freqSet(K arr[])
+    {
+        Map<K, Integer> map = countFrequency(arr);
+        Set<K> mostFreq = new HashSet<>();
+        int freq = arr.length / 2;
+        for (Map.Entry<K, Integer> entry: map.entrySet())
+        {
+            if (entry.getValue() > freq)
+            {
+                mostFreq.add(entry.getKey());
+            }
+        }
+        return mostFreq;
     }
 }
