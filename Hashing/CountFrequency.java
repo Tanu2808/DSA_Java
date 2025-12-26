@@ -24,4 +24,34 @@ public class CountFrequency<K> {
         }
         return map;
     }
+
+    public K mostFrequent(K arr[])
+    {
+        Map<K, Integer> map = countFrequency(arr);
+        K mostFreq = null;
+        int freq = Integer.MIN_VALUE;
+        for (Map.Entry<K, Integer> entry: map.entrySet())
+        {
+            if (entry.getValue() > freq) {
+                freq = entry.getValue();
+                mostFreq = entry.getKey();
+            }
+        }
+        return mostFreq;
+    }
+
+    public K leastFrequent(K arr[])
+    {
+        Map<K, Integer> map = countFrequency(arr);
+        K leastFreq = null;
+        int freq = Integer.MAX_VALUE;
+        for (Map.Entry<K, Integer> entry: map.entrySet())
+        {
+            if (entry.getValue() > freq) {
+                freq = entry.getValue();
+                leastFreq = entry.getKey();
+            }
+        }
+        return leastFreq;
+    }
 }
