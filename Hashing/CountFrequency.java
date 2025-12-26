@@ -13,4 +13,15 @@ public class CountFrequency<K> {
         return map;
 
     }
+
+    public Map<Character, Integer> countFrequency(String str)
+    {
+        Map<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < str.length(); i++)
+        {
+            map.put(str.charAt(i), map.getOrDefault(map.get(str.charAt(i)) + 1, 0));
+        }
+        return map;
+    }
 }
