@@ -27,4 +27,33 @@ public class Sort {
             }
         }
     }
+
+    public void sortColors(int[] arr)
+    {
+        int i = 0;
+        int j = 0;
+        int k = arr.length - 1;
+        while (j <= k)
+        {
+            switch (arr[j]) {
+                case 0 -> {
+                    swap(arr, i, j);
+                    i++;
+                    j++;
+                }
+                case 2 -> {
+                    swap(arr, k, j);
+                    k--;
+                }
+                default -> j++;
+            }
+        }
+    }
+
+    public void swap(int[] arr,int i,int j)
+    {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 }
